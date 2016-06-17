@@ -1,41 +1,11 @@
-﻿-- phpMyAdmin SQL Dump
--- version 4.3.11
--- http://www.phpmyadmin.net
---
--- Servidor: 127.0.0.1
--- Tiempo de generación: 17-06-2016 a las 18:25:48
--- Versión del servidor: 5.6.24
--- Versión de PHP: 5.6.8
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
---
--- Base de datos: `autopartes`
---
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `agnos`
---
-
-CREATE TABLE IF NOT EXISTS `agnos` (
+﻿CREATE TABLE `agnos` (
   `id` int(5) NOT NULL,
   `agno` int(4) NOT NULL,
   `created_at` varchar(45) NOT NULL,
   `updated_at` varchar(45) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `agnos`
---
+
 
 INSERT INTO `agnos` (`id`, `agno`, `created_at`, `updated_at`) VALUES
 (1, 2015, '', ''),
@@ -55,13 +25,9 @@ INSERT INTO `agnos` (`id`, `agno`, `created_at`, `updated_at`) VALUES
 (15, 2001, '', ''),
 (16, 2000, '', '');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `evaluaciones`
---
 
-CREATE TABLE IF NOT EXISTS `evaluaciones` (
+CREATE TABLE `evaluaciones` (
   `id` int(5) NOT NULL,
   `comentario` varchar(45) NOT NULL,
   `idopcion` int(5) NOT NULL,
@@ -70,22 +36,15 @@ CREATE TABLE IF NOT EXISTS `evaluaciones` (
   `updated_at` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `marcas`
---
 
-CREATE TABLE IF NOT EXISTS `marcas` (
+CREATE TABLE `marcas` (
   `id` int(5) NOT NULL,
   `marca` varchar(30) NOT NULL,
   `created_at` varchar(45) NOT NULL,
   `updated_at` varchar(45) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `marcas`
---
 
 INSERT INTO `marcas` (`id`, `marca`, `created_at`, `updated_at`) VALUES
 (1, 'Audi', '', ''),
@@ -111,13 +70,8 @@ INSERT INTO `marcas` (`id`, `marca`, `created_at`, `updated_at`) VALUES
 (21, 'Volkswagen', '', ''),
 (22, 'Volvo', '', '');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `modelos`
---
-
-CREATE TABLE IF NOT EXISTS `modelos` (
+CREATE TABLE `modelos` (
   `id` int(5) NOT NULL,
   `modelo` varchar(30) NOT NULL,
   `idmarca` int(5) NOT NULL,
@@ -127,9 +81,7 @@ CREATE TABLE IF NOT EXISTS `modelos` (
   `updated_at` varchar(45) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=392 DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `modelos`
---
+
 
 INSERT INTO `modelos` (`id`, `modelo`, `idmarca`, `idagno`, `idmotor`, `created_at`, `updated_at`) VALUES
 (1, 'A1', 1, 1, 1, '', ''),
@@ -473,22 +425,16 @@ INSERT INTO `modelos` (`id`, `modelo`, `idmarca`, `idagno`, `idmotor`, `created_
 (390, 'Venza', 20, 4, 58, '', ''),
 (391, 'Yaris', 20, 4, 48, '', '');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `motores`
---
 
-CREATE TABLE IF NOT EXISTS `motores` (
+CREATE TABLE `motores` (
   `id` int(5) NOT NULL,
   `motor` varchar(15) NOT NULL,
   `created_at` varchar(45) NOT NULL,
   `updated_at` varchar(45) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `motores`
---
+
 
 INSERT INTO `motores` (`id`, `motor`, `created_at`, `updated_at`) VALUES
 (1, '4 Cil 1.4 lts', '', ''),
@@ -555,22 +501,14 @@ INSERT INTO `motores` (`id`, `motor`, `created_at`, `updated_at`) VALUES
 (64, '10 Cil 5.0 lts', '', ''),
 (65, '4 Cil 1.1 lts', '', '');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `opciones`
---
-
-CREATE TABLE IF NOT EXISTS `opciones` (
+CREATE TABLE `opciones` (
   `id` int(1) NOT NULL,
   `opcion` varchar(20) NOT NULL,
   `created_at` varchar(45) NOT NULL,
   `updated_at` varchar(45) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `opciones`
---
 
 INSERT INTO `opciones` (`id`, `opcion`, `created_at`, `updated_at`) VALUES
 (1, 'Muy Satisfecho', '', ''),
@@ -578,13 +516,8 @@ INSERT INTO `opciones` (`id`, `opcion`, `created_at`, `updated_at`) VALUES
 (3, 'Poco Satisfecho', '', ''),
 (4, 'Insatisfecho', '', '');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `piezas`
---
-
-CREATE TABLE IF NOT EXISTS `piezas` (
+CREATE TABLE `piezas` (
   `id` int(5) NOT NULL,
   `pieza` varchar(40) NOT NULL,
   `serie` varchar(20) NOT NULL,
@@ -596,9 +529,6 @@ CREATE TABLE IF NOT EXISTS `piezas` (
   `updated_at` varchar(45) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `piezas`
---
 
 INSERT INTO `piezas` (`id`, `pieza`, `serie`, `marca`, `infoadicional`, `idsucursal`, `idmodelo`, `created_at`, `updated_at`) VALUES
 (1, 'Buje Horquilla', '191-407-182', 'SYD', 'Chico, Inferior', 2, 1, '', ''),
@@ -650,43 +580,27 @@ INSERT INTO `piezas` (`id`, `pieza`, `serie`, `marca`, `infoadicional`, `idsucur
 (47, 'Tornillo Estabilizador', '2126004', 'SYD', 'Delantero', 3, 1, '', ''),
 (48, 'Tornillo Estabilizador', 'PHAK.3022', 'HUAT', 'Delantero', 5, 1, '', '');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `roles`
---
-
-CREATE TABLE IF NOT EXISTS `roles` (
+CREATE TABLE `roles` (
   `id` int(5) NOT NULL,
   `rol` varchar(15) NOT NULL,
   `created_at` varchar(45) NOT NULL,
   `updated_at` varchar(45) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `roles`
---
 
 INSERT INTO `roles` (`id`, `rol`, `created_at`, `updated_at`) VALUES
 (1, 'Administrador', '', ''),
 (2, 'Colaborador', '', '');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `sucursales`
---
-
-CREATE TABLE IF NOT EXISTS `sucursales` (
+CREATE TABLE `sucursales` (
   `id` int(5) NOT NULL,
   `sucursal` varchar(30) NOT NULL,
   `created_at` varchar(45) NOT NULL,
   `updated_at` varchar(45) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `sucursales`
---
 
 INSERT INTO `sucursales` (`id`, `sucursal`, `created_at`, `updated_at`) VALUES
 (1, 'Chitré', '', ''),
@@ -707,13 +621,8 @@ INSERT INTO `sucursales` (`id`, `sucursal`, `created_at`, `updated_at`) VALUES
 (16, 'Chame', '', ''),
 (17, 'Penonomé', '', '');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `usuarios`
---
-
-CREATE TABLE IF NOT EXISTS `usuarios` (
+CREATE TABLE  `usuarios` (
   `id` int(11) NOT NULL,
   `nombre` varchar(45) NOT NULL,
   `apellido` varchar(45) NOT NULL,
@@ -727,124 +636,48 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `updated_at` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `agnos`
---
 ALTER TABLE `agnos`
   ADD PRIMARY KEY (`id`);
 
---
--- Indices de la tabla `evaluaciones`
---
 ALTER TABLE `evaluaciones`
   ADD PRIMARY KEY (`id`);
 
---
--- Indices de la tabla `marcas`
---
 ALTER TABLE `marcas`
   ADD PRIMARY KEY (`id`);
 
---
--- Indices de la tabla `modelos`
---
 ALTER TABLE `modelos`
   ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `motores`
---
 ALTER TABLE `motores`
   ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `opciones`
---
 ALTER TABLE `opciones`
   ADD PRIMARY KEY (`id`);
 
---
--- Indices de la tabla `piezas`
---
 ALTER TABLE `piezas`
   ADD PRIMARY KEY (`id`);
 
---
--- Indices de la tabla `roles`
---
 ALTER TABLE `roles`
   ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `sucursales`
---
 ALTER TABLE `sucursales`
   ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `usuarios`
---
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `agnos`
---
 ALTER TABLE `agnos`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
---
--- AUTO_INCREMENT de la tabla `evaluaciones`
---
 ALTER TABLE `evaluaciones`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `marcas`
---
 ALTER TABLE `marcas`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
---
--- AUTO_INCREMENT de la tabla `modelos`
---
 ALTER TABLE `modelos`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=392;
---
--- AUTO_INCREMENT de la tabla `motores`
---
 ALTER TABLE `motores`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=66;
---
--- AUTO_INCREMENT de la tabla `opciones`
---
 ALTER TABLE `opciones`
   MODIFY `id` int(1) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT de la tabla `piezas`
---
 ALTER TABLE `piezas`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=49;
---
--- AUTO_INCREMENT de la tabla `roles`
---
 ALTER TABLE `roles`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT de la tabla `sucursales`
---
 ALTER TABLE `sucursales`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
---
--- AUTO_INCREMENT de la tabla `usuarios`
---
 ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
