@@ -32,7 +32,7 @@
 					<li><a href="{{ url('consulta') }}">Consulta</a></li>
 					<li><a href="{{ url('evaluacion') }}">Evaluación</a></li>
 				</ul>
-
+					
 				<ul class="nav navbar-nav navbar-right">
 					@if (Auth::guest())
 						<li><a href="{{ url('/auth/login') }}">Login</a></li>
@@ -46,7 +46,29 @@
 						</li>
 					@endif
 				</ul>
+
 			</div>
+			<div class="dropdown">
+						  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Admin
+						  <span class="caret"></span></button>
+						  <ul class="dropdown-menu">
+						    <li><a href="#">Ingresar USUARIO</a></li> 
+						    <li><a href="#">Ingresar EMPRESA</a></li>
+						    <li><a href="#">Ingresar MARCAS</a></li>
+						    <li><a href="#">Ingresar MODELOS</a></li>
+						    <li><a href="#">Ingresar PIEZAS</a></li>
+						  </ul>
+			</div>
+
+			<div class="dropdown">
+						  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Reportes
+						  <span class="caret"></span></button>
+						  <ul class="dropdown-menu">
+						    <li><a href="#">Reporte GENERAL</a></li> 
+						    <li><a href="#">Reporte Empresarial</a></li>
+						 </ul>
+			</div>
+					
 		</div>
 	</nav>
 
