@@ -1,4 +1,4 @@
-<?php namespace App\Events;
+<?php namespace Autopartes\Events;
 
 abstract class Event {
 
