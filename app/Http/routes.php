@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/', 'FrontController@index');
-Route::get('nosotros', 'FrontController@nosotros');
+Route::get('/', 'FrontController@index'); //JARLEY
+Route::get('nosotros', 'FrontController@nosotros'); //JARLEY
+Route::get('consulta', 'ConsultaController@index'); //LIBNY
 
 //Anais esta parte creo que te sirve a ti
 Route::get('home', 'HomeController@index');

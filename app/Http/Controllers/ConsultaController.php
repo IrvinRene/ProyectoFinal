@@ -1,6 +1,6 @@
 <?php namespace Autopartes\Http\Controllers;
 
-class WelcomeController extends Controller {
+class ConsultaController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------
