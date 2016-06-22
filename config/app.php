@@ -144,7 +144,7 @@ return [
 		'Autopartes\Providers\ConfigServiceProvider',
 		'Autopartes\Providers\EventServiceProvider',
 		'Autopartes\Providers\RouteServiceProvider',
-		'Collective\Html\HtmlServiceProvider',
+		// 'Collective\Html\HtmlServiceProvider',
 	],
 
 	/*
