@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Laravel</title>
+	<title>Ing. Sist. Inf. </title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
@@ -49,7 +49,7 @@
 
 			</div>
 			<div class="dropdown">
-						  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Admin
+						  <button class="btn btn dropdown-toggle" type="button" data-toggle="dropdown">Admin
 						  <span class="caret"></span></button>
 						  <ul class="dropdown-menu">
 						    <li><a href="#">Ingresar USUARIO</a></li> 
@@ -61,7 +61,7 @@
 			</div>
 
 			<div class="dropdown">
-						  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Reportes
+						  <button class="btn btn dropdown-toggle" type="button" data-toggle="dropdown">Reportes
 						  <span class="caret"></span></button>
 						  <ul class="dropdown-menu">
 						    <li><a href="#">Reporte GENERAL</a></li> 
