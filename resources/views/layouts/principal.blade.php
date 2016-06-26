@@ -40,7 +40,7 @@
 						    <li><a href="{{ url('marca') }}">Ingresar MARCAS</a></li>
 						    <li><a href="#">Ingresar MODELOS</a></li>
 						    <li><a href="#">Ingresar PIEZAS</a></li>
-						    <li><a href="#">Inventario</a></li>
+						    <li><a href="#">Inventario</a></li> 
 						  </ul>
 					</li>
 					<li>
